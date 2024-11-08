@@ -1,0 +1,20 @@
+<!-- views/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MVC App</title>
+  </head>
+  <body>
+    <h1>Welcome to the MVC app!</h1>
+    <p>An app for collecting your MVCs.</p>
+    <h1>All MVCs</h1>
+    <ul>
+      <% mvcEjs.forEach(mvcEjs => { %>
+      <li><%= mvcEjs.name %></li>
+      <% }); %>
+    </ul>
+  </body>
+</html>
