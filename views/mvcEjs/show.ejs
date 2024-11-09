@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= mvcEjs.name %></title>
+    <!-- Dynamic title based on fruit name -->
+  </head>
+  <body>
+    <a href="/">Back To MVCs</a>
+    <h1><%= mvcEjs.name %></h1>
+    <!-- Conditional rendering based on fruit's readiness -->
+    <% if (mvcEjs.isMvcRoute) { %>
+    <p>This is an MVC R!</p>
+    <% } else { %>
+    <p>This is not MVC R!</p>
+    <% } %>
+    <form action="mvcEjs/<%= mvcEjs._id %>?_method=DELETE" method="POST">
+      <button type="submit">Delete <%= mvcEjs.name %></button>
+      <br />
+      <br />
+      <a href="/mvcEjs/<%= mvcEjs._id %>/edit">Edit <%= mvcEjs.name %></a>
+      <br />
+      <br />
+      <a href="/">Back To Main Menu</a>
+    </form>
+  </body>
+</html>

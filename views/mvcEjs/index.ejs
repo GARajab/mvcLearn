@@ -8,12 +8,16 @@
     <title>MVC App</title>
   </head>
   <body>
+    <a href="/mvcEjs/new">Add New MVC</a>
+    <br />
+    <br />
+
     <h1>Welcome to the MVC app!</h1>
     <p>An app for collecting your MVCs.</p>
     <h1>All MVCs</h1>
     <ul>
       <% mvcEjs.forEach(mvcEjs => { %>
-      <li><%= mvcEjs.name %></li>
+      <li><a href="/<%= mvcEjs._id %>"><%=mvcEjs.name%></a></li>
       <% }); %>
     </ul>
   </body>

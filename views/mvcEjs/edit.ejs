@@ -1,0 +1,13 @@
+<body>
+  <!-- update the header -->
+  <h1>Edit <%= mvc.name %></h1>
+  <form action="/mvcEjs/<%= mvc._id%>?_method=PUT" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" value="<%= mvc.name %>" />
+    <label for="isMvcRoute">is MVC Route?</label>
+    <input type="checkbox" name="isMvcRoute" id="isMvcRoute" <% if(mvc.isMvcRoute) {%>checked <%}%> />
+    <!-- update the button text -->
+    <button type="submit">Update MVCEJS</button>
+  </form>
+  <a href="/">Back to MVCEJS</a>
+</body>
